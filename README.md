@@ -22,6 +22,15 @@ brew update
 brew upgrade MaybeLL/tap/workbox
 ```
 
+Uninstall the CLI and its unmodified companion skills together with Workbox 0.1.2 or later:
+
+```sh
+workbox uninstall --dry-run
+workbox uninstall
+```
+
+This asks Homebrew to remove all installed Workbox versions and removes the skill locations recorded by the installer. Configuration databases and existing workspaces are preserved. Modified skills stop uninstall before deletion. Custom paths installed with 0.1.1 can be registered after upgrading using `workbox skill install --path DIR`, or passed once using `workbox uninstall --skill-path DIR`.
+
 Native bottles are provided for Apple Silicon and Intel Macs on macOS 15 or later. Other supported Homebrew systems build from the pinned source release with Go as a build dependency. Git is required at runtime. No Python installation is needed.
 
 Check the installed version:
