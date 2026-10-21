@@ -16,10 +16,12 @@ brew upgrade MaybeLL/tap/workbox
 
 Native bottles are provided for Apple Silicon and Intel Macs on macOS 15 or later. Other supported Homebrew systems build from the pinned source release with Go as a build dependency. Git is required at runtime. No Python installation is needed.
 
-Verify an installed copy without touching your configuration:
+Check the installed version:
 
 ```sh
-brew test MaybeLL/tap/workbox
+workbox --version --format json
 ```
+
+Both native bottles run the configuration and workspace smoke checks in release CI. Maintainers can also run `brew test MaybeLL/tap/workbox`; Homebrew's test framework requires current Command Line Tools on macOS even when the application itself was installed from a bottle.
 
 Release binaries, checksums, bottle metadata and guides are published at [GitHub Releases](https://github.com/MaybeLL/workbox-cli/releases). Report bugs in the [Workbox issue tracker](https://github.com/MaybeLL/workbox-cli/issues).
