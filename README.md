@@ -7,6 +7,14 @@ brew install MaybeLL/tap/workbox
 workbox --version
 ```
 
+Install the optional Codex skill bundled with Workbox 0.1.1 or later:
+
+```sh
+workbox skill install
+```
+
+This installs into `~/.agents/skills/workbox` for use as `$workbox` in Codex. The executable includes the instructions, so this step works offline. Repeating it preserves identical installations and reports a conflict for different existing content.
+
 Upgrade:
 
 ```sh
