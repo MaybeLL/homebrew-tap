@@ -7,13 +7,15 @@ brew install MaybeLL/tap/workbox
 workbox --version
 ```
 
-Install the optional Codex skill bundled with Workbox 0.1.1 or later:
+Install the optional `workbox` agent skill bundled with Workbox 0.1.1 or later:
 
 ```sh
 workbox skill install
 ```
 
-This installs into `~/.agents/skills/workbox` for use as `$workbox` in Codex. The executable includes the instructions, so this step works offline. Repeating it preserves identical installations and reports a conflict for different existing content.
+This installs into the shared user directory `~/.agents/skills/workbox`, supported by Codex, Cursor and OpenCode. In Codex, invoke it as `$workbox`. The executable includes the instructions, so this step works offline. Repeating it preserves identical installations and reports a conflict for different existing content.
+
+Workbox 0.1.3+ writes a root `AGENTS.md` in each new workspace. It directs agents to this one global skill for initialization and Git worktree development; no workspace-local `workbox-dev` skill is installed. For sessions started inside a nested repository/worktree, explicitly load the workspace entry point and global skill. Existing repository instructions and existing workspaces are preserved.
 
 Upgrade:
 
