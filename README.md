@@ -7,6 +7,8 @@ brew install MaybeLL/tap/workbox
 workbox --version
 ```
 
+Workbox 0.2.0 adds optional MySQL configuration storage behind the same interface as SQLite. SQLite remains the default and existing databases stay compatible. To select MySQL, set `WORKBOX_DB=mysql` and either `WORKBOX_MYSQL_DSN_FILE` or `WORKBOX_MYSQL_DSN` for an existing dedicated database. See the [storage setup and migration guide](https://github.com/MaybeLL/workbox-cli/blob/main/docs/storage.md). JSON export/import transfers configurations between backends; uninstall preserves both local and remote configuration.
+
 Install the optional `workbox` agent skill bundled with Workbox 0.1.1 or later:
 
 ```sh
