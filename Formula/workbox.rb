@@ -1,14 +1,14 @@
 class Workbox < Formula
   desc "Reusable configurations and safe local Git workspace preparation"
   homepage "https://github.com/MaybeLL/workbox-cli"
-  url "https://github.com/MaybeLL/workbox-cli.git", tag: "v0.3.2", revision: "bbd841018989e3650a86314ca205b09ea99af669"
-  version "0.3.2"
+  url "https://github.com/MaybeLL/workbox-cli.git", tag: "v0.4.0", revision: "992cc18131fcb820600c6f30ea137ec9e2e9d8aa"
+  version "0.4.0"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/MaybeLL/workbox-cli/releases/download/v0.3.2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b1f7f1661f30e2b4cb00cbd22348a3800801fc2395a8af33fc35c31b0092555c"
-    sha256 cellar: :any_skip_relocation, sequoia:       "4c6fa97ff7d57102969c5d5f4530d3a0d2d456fc64c42b20ed948bff6aa36d3e"
+    root_url "https://github.com/MaybeLL/workbox-cli/releases/download/v0.4.0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "19a69b1ff84bde6f20108f1f2b9709040132a28e2931d23fbae264aa3d5c7d34"
+    sha256 cellar: :any_skip_relocation, sequoia:       "a5c68f6870677c0403fc9a8db1c06038439c94c8c98fa2439def771f718c4d4c"
   end
 
   depends_on "go" => :build
